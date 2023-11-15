@@ -38,4 +38,11 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
+    @IBAction func goToAddSetAction(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toFour", sender: self)
+    }
+    
+    
+    
 }

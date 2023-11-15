@@ -74,6 +74,12 @@ class card: Codable
         }
         
         
+        @IBAction func goToSetsAction(_ sender: Any) {
+            
+            performSegue(withIdentifier: "toTwo", sender: self)
+        }
+        
+        
         func addnewSet(name: String, color: String){
             
            // let thisname = name!
@@ -85,6 +91,10 @@ class card: Codable
             
             AppData.setofcardsets.append(newset)
         }
+        
+        
+        
+        
         
         
         //Yassss
