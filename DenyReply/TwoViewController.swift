@@ -21,11 +21,16 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return AppData.setofcardsets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "yay", for: indexPath)
+        cell.backgroundColor =
+        UIColor(named: AppData.setofcardsets[indexPath.row].setColor)
+        
+    
+        return cell
     }
 
 }

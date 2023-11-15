@@ -21,6 +21,8 @@ class card: Codable
         
     }
     
+}
+    
     class cardSetClass: Codable {
         
         var setName = ""
@@ -34,6 +36,7 @@ class card: Codable
             
             //>>>>>>> Stashed changes
         }
+        
         
         
         func addCard(myCard: card){
@@ -53,15 +56,20 @@ class card: Codable
         
         
     }
+    
+    
+    
     class ViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
         }
+        
+        
+        
         //Yassss
         //wwwwwwwwww
         
     }
     
-}
