@@ -6,14 +6,8 @@
 //
 
 import UIKit
-class AppData
-{
 
-    
-    
-    
-}
-class card
+class card: Codable
 {
     var question : String
     var answer : String
@@ -27,7 +21,7 @@ class card
         
     }
     
-    class cardSetClass {
+    class cardSetClass: Codable {
         
         var setName = ""
         var setColor = ""
@@ -41,7 +35,21 @@ class card
             //>>>>>>> Stashed changes
         }
         
+        
+        func addCard(myCard: card){
+            cards.append(myCard)
+        }
         //  }
+        
+        
+    }
+    
+    
+    class AppData: Codable
+    {
+
+        static var name = ""
+        static var setofcardsets: [cardSetClass] = []
         
         
     }
