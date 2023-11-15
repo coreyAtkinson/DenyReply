@@ -19,6 +19,7 @@
 		B95022B52B03CC5600FE8E6B /* DenyReplyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95022B42B03CC5600FE8E6B /* DenyReplyUITestsLaunchTests.swift */; };
 		B9D59B6B2B0516A2000A25CB /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D59B6A2B0516A2000A25CB /* TwoViewController.swift */; };
 		B9D59B6D2B0516D2000A25CB /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D59B6C2B0516D2000A25CB /* ThreeViewController.swift */; };
+		B9D59B6F2B051C67000A25CB /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D59B6E2B051C67000A25CB /* FourViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B95022B42B03CC5600FE8E6B /* DenyReplyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenyReplyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9D59B6A2B0516A2000A25CB /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		B9D59B6C2B0516D2000A25CB /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		B9D59B6E2B051C67000A25CB /* FourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B95022902B03CC5400FE8E6B /* SceneDelegate.swift */,
 				B95022922B03CC5400FE8E6B /* ViewController.swift */,
 				B95022942B03CC5400FE8E6B /* Main.storyboard */,
+				B9D59B6E2B051C67000A25CB /* FourViewController.swift */,
 				B9D59B6C2B0516D2000A25CB /* ThreeViewController.swift */,
 				B9D59B6A2B0516A2000A25CB /* TwoViewController.swift */,
 				B950229A2B03CC5600FE8E6B /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 			files = (
 				B9D59B6B2B0516A2000A25CB /* TwoViewController.swift in Sources */,
 				B95022932B03CC5400FE8E6B /* ViewController.swift in Sources */,
+				B9D59B6F2B051C67000A25CB /* FourViewController.swift in Sources */,
 				B950228F2B03CC5400FE8E6B /* AppDelegate.swift in Sources */,
 				B9D59B6D2B0516D2000A25CB /* ThreeViewController.swift in Sources */,
 				B95022992B03CC5400FE8E6B /* DenyReply.xcdatamodeld in Sources */,
