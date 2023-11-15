@@ -19,6 +19,10 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
         // Do any additional setup after loading the view.
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        collectionViewOutlet.reloadData()
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return AppData.setofcardsets.count
@@ -34,10 +38,4 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-
-    @IBAction func addSetAction(_ sender: UIBarButtonItem) {
-        
-        
-        
-    }
 }
