@@ -32,5 +32,7 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
         return cell
     }
+    
+    
 
 }

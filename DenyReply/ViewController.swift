@@ -63,9 +63,28 @@ class card: Codable
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            
+            let card1 = card(question2: "what is 2 + 2", answer2: "FISH")
+            
+            let set1 = cardSetClass(setName: "numbers", setColor: "pink", cards: [card1])
+            
+            AppData.setofcardsets.append(set1)
             // Do any additional setup after loading the view.
         }
         
+        
+        func addnewSet(name: String, color: String){
+            
+           // let thisname = name!
+           // let thiscolor = color!
+            
+            let exampleCard = card(question2: "This is an example card", answer2: "this is an example answer")
+            
+            let newset = cardSetClass(setName: name, setColor: color, cards: [exampleCard])
+            
+            AppData.setofcardsets.append(newset)
+        }
         
         
         //Yassss
