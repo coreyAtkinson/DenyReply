@@ -74,7 +74,13 @@
                             <constraint firstItem="UeB-nd-yac" firstAttribute="bottom" secondItem="YNl-Cr-sVR" secondAttribute="bottom" id="oCN-ja-TNA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bhN-rD-Cjr"/>
+                    <navigationItem key="navigationItem" id="bhN-rD-Cjr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xv3-bG-ozG">
+                            <connections>
+                                <action selector="addSetAction:" destination="PJU-Ei-FkF" id="slb-bx-gJV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="UeB-nd-yac" id="97q-WN-tW8"/>
                         <segue destination="0ZQ-hN-mtJ" kind="show" identifier="toThree" id="mJ7-kG-uLM"/>
@@ -158,11 +164,55 @@
                     <navigationItem key="navigationItem" id="yaU-ZP-WSA"/>
                     <connections>
                         <outlet property="tableViewOutlet" destination="bXE-IW-miJ" id="hdC-lt-za5"/>
+                        <segue destination="kmK-dt-N6m" kind="show" identifier="toFive" id="0VU-1H-0bA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z08-nC-EdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2912.8000000000002" y="32.833583208395808"/>
+        </scene>
+        <!--Five View Controller-->
+        <scene sceneID="4zF-I0-XqE">
+            <objects>
+                <viewController id="kmK-dt-N6m" customClass="FiveViewController" customModule="DenyReply" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fl2-h0-zse">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDx-HJ-BLv">
+                                <rect key="frame" x="29" y="102" width="316" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYx-zx-Sa2">
+                                <rect key="frame" x="29" y="167" width="316" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eik-5l-D3L">
+                                <rect key="frame" x="161" y="235" width="53" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="add"/>
+                                <connections>
+                                    <action selector="addCardAction:" destination="kmK-dt-N6m" eventType="touchUpInside" id="dIX-87-LJ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mOP-gQ-EOo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PgQ-JT-YyI"/>
+                    <connections>
+                        <outlet property="answerOutlet" destination="XYx-zx-Sa2" id="3WN-jk-Fu6"/>
+                        <outlet property="questionOutlet" destination="xDx-HJ-BLv" id="s47-r9-qMT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ac6-mx-g4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3933.5999999999999" y="32.833583208395808"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bjv-N9-u5A">
