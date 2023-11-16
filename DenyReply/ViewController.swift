@@ -61,6 +61,11 @@ class card: Codable
     
     class ViewController: UIViewController {
         
+        
+        @IBOutlet weak var youhaveOutlet: UILabel!
+        
+        
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -71,8 +76,14 @@ class card: Codable
             
             AppData.setofcardsets.append(set1)
             // Do any additional setup after loading the view.
+            
+            
         }
         
+        
+        override func viewDidAppear(_ animated: Bool) {
+            youhaveOutlet.text = "you have \(AppData.setofcardsets.count) set/s"
+        }
         
         @IBAction func goToSetsAction(_ sender: Any) {
             
