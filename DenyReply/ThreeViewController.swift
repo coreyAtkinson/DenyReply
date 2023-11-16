@@ -22,12 +22,13 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return set.cards.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        
+        cell.textLabel?.text = "\(set.cards[indexPath.row].question)"
+        cell.detailTextLabel?.text = "\(set.cards[indexPath.row].answer)"
         return cell
     }
 

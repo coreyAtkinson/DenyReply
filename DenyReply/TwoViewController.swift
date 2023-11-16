@@ -11,7 +11,7 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
    
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     var index = 0
-
+var direction = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOutlet.dataSource = self
@@ -49,15 +49,19 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView,
       didSelectItemAt indexPath: IndexPath) {
         index = indexPath.row
+        direction = 1
         performSegue(withIdentifier: "toThree", sender: nil)
-        
+        direction = 0
         
         print("Cell \(indexPath.row) clicked")
       }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nvc = segue.destination as! ThreeViewController
-        nvc.set = AppData.setofcardsets[index]
+        if direction == 1
+        {
+            let nvc = segue.destination as! ThreeViewController
+            nvc.set = AppData.setofcardsets[index]
+        }
     }
 
     
