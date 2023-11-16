@@ -31,6 +31,13 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.detailTextLabel?.text = "\(set.cards[indexPath.row].answer)"
         return cell
     }
-
+    
+    
+    
+    @IBAction func gotoAddCardAction(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toFive", sender: self)
+    }
+    
  
 }
