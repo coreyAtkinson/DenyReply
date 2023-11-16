@@ -9,6 +9,8 @@ import UIKit
 
 class FourViewController: UIViewController {
 
+    
+    let potColors = ["pink", "red", "orange", "yellow", "green", "blue", "purple", "brown"]
     @IBOutlet weak var setColorOutlet: UITextField!
     @IBOutlet weak var setNameOutlet: UITextField!
     override func viewDidLoad() {
@@ -18,12 +20,23 @@ class FourViewController: UIViewController {
     }
     
     @IBAction func setAction(_ sender: UIButton) {
+        var hasColor: Bool = false
+        
         let name = setNameOutlet.text ?? ""
-        let color = setColorOutlet.text ?? ""
+        var color = setColorOutlet.text?.lowercased() ?? ""
         
-        
+        for x in potColors {
+            if color == x {
+                hasColor = true
+            }
+        }
+        if hasColor == false {
+            color =  "red"
+        }
         addnewSet(name: name, color: color)
         
+        setNameOutlet.text = ""
+        setColorOutlet.text = ""
         
         
         
