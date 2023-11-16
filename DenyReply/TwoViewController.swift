@@ -10,7 +10,7 @@ import UIKit
 class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
-    
+    var index = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "yay", for: indexPath)
-        cell.backgroundColor = UIColor(named: AppData.setofcardsets[indexPath.row].setColor)
+    //    cell.backgroundColor = UIColor(named: AppData.setofcardsets[indexPath.row].setColor)
         
         
         
         
-        //cell.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
+        cell.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
         
     
         return cell
@@ -46,7 +46,19 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
         performSegue(withIdentifier: "toFour", sender: self)
     }
+    func collectionView(_ collectionView: UICollectionView,
+      didSelectItemAt indexPath: IndexPath) {
+        index = indexPath.row
+        performSegue(withIdentifier: "toThree", sender: nil)
+        
+        
+        print("Cell \(indexPath.row) clicked")
+      }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! ThreeViewController
+        nvc.set = AppData.setofcardsets[index]
+    }
+
     
 }
