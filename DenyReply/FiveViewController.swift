@@ -20,6 +20,10 @@ class FiveViewController: UIViewController {
 
     @IBAction func addCardAction(_ sender: UIButton) {
         
+        let question
+        = questionOutlet.text ?? ""
+        let answer = answerOutlet.text ?? ""
+        
         
         
         
