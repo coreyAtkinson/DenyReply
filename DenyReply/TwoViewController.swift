@@ -10,7 +10,7 @@ import UIKit
 class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
-    
+    var index = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,19 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
         performSegue(withIdentifier: "toFour", sender: self)
     }
+    func collectionView(_ collectionView: UICollectionView,
+      didSelectItemAt indexPath: IndexPath) {
+        index = indexPath.row
+        performSegue(withIdentifier: "toThree", sender: nil)
+        
+        
+        print("Cell \(indexPath.row) clicked")
+      }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! ThreeViewController
+        nvc.set = AppData.setofcardsets[index]
+    }
+
     
 }
