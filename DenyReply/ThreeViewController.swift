@@ -10,7 +10,7 @@ import UIKit
 class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewOutlet: UITableView!
-    var set : cardSetClass!
+   // var set : cardSetClass!
     
 
     override func viewDidLoad() {
@@ -18,17 +18,17 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         
-       print(set.setName)
+       // print(AppData.setofcardsets)
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return set.cards.count
+        return AppData.setofcardsets[AppData.index].cards.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = "\(set.cards[indexPath.row].question)"
-        cell.detailTextLabel?.text = "\(set.cards[indexPath.row].answer)"
+        cell.textLabel?.text = "\(AppData.setofcardsets[AppData.index].cards[indexPath.row].question)"
+        cell.detailTextLabel?.text = "\(AppData.setofcardsets[AppData.index].cards[indexPath.row].answer)"
         return cell
     }
     
@@ -39,5 +39,7 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "toFive", sender: self)
     }
     
- 
+    
+    
+  
 }

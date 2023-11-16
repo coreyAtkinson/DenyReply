@@ -45,7 +45,7 @@ var direction = 0
     }
     func collectionView(_ collectionView: UICollectionView,
       didSelectItemAt indexPath: IndexPath) {
-        index = indexPath.row
+        AppData.index = indexPath.row
         direction = 1
         performSegue(withIdentifier: "toThree", sender: nil)
         direction = 0
@@ -57,7 +57,7 @@ var direction = 0
         if direction == 1
         {
             let nvc = segue.destination as! ThreeViewController
-            nvc.set = AppData.setofcardsets[index]
+                //    nvc.set = AppData.setofcardsets[index]
         }
     }
 

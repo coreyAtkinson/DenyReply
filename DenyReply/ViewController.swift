@@ -53,6 +53,7 @@ class card: Codable
 
         static var name = ""
         static var setofcardsets: [cardSetClass] = []
+        static var index = 0
         
         
     }
