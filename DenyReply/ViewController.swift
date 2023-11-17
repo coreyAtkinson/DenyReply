@@ -46,6 +46,10 @@ class card: Codable
         func removeCard(index: Int){
             cards.remove(at: index)
         }
+        
+        func shuffleCards(){
+            cards.shuffle()
+        }
         //  }
         
         

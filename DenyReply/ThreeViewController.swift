@@ -58,6 +58,13 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
 
+    @IBAction func shuffleAction(_ sender: Any) {
+        AppData.setofcardsets[AppData.index].shuffleCards()
+        tableViewOutlet.reloadData()
+        
+    }
+    
+    
     
     @IBAction func goToAction(_ sender: Any) {
         
