@@ -42,6 +42,10 @@ class card: Codable
         func addCard(myCard: card){
             cards.append(myCard)
         }
+        
+        func removeCard(index: Int){
+            cards.remove(at: index)
+        }
         //  }
         
         
@@ -50,6 +54,9 @@ class card: Codable
     
     class AppData: Codable
     {
+        
+        static let defaults = UserDefaults.standard
+        
 
         static var name = ""
         static var setofcardsets: [cardSetClass] = []
@@ -79,6 +86,15 @@ class card: Codable
             // Do any additional setup after loading the view.
             
             
+            if let items = AppData.defaults.data(forKey: "CardSetSet") {
+                            let decoder = JSONDecoder()
+                if let decoded = try? decoder.decode([cardSetClass].self, from: items) {
+                                AppData.setofcardsets = decoded
+                            }
+                
+                    }
+            
+            
         }
         
         
@@ -102,6 +118,12 @@ class card: Codable
             let newset = cardSetClass(setName: name, setColor: color, cards: [exampleCard])
             
             AppData.setofcardsets.append(newset)
+            
+            //encoding
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(AppData.setofcardsets) {
+                AppData.defaults.set(encoded, forKey: "CardSetSet")
+            }
         }
         
         

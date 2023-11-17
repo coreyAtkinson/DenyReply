@@ -31,7 +31,10 @@ class FiveViewController: UIViewController {
         questionOutlet.text = ""
         answerOutlet.text = ""
         
-        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.setofcardsets) {
+            AppData.defaults.set(encoded, forKey: "CardSetSet")
+        }
         
         
         

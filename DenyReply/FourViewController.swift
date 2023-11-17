@@ -56,6 +56,11 @@ class FourViewController: UIViewController {
         let newset = cardSetClass(setName: name, setColor: color, cards: [exampleCard])
         
         AppData.setofcardsets.append(newset)
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.setofcardsets) {
+            AppData.defaults.set(encoded, forKey: "CardSetSet")
+        }
     }
     
    

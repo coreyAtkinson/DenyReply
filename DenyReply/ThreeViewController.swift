@@ -37,6 +37,26 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            AppData.setofcardsets[AppData.index].removeCard(index: indexPath.row)
+            
+            
+            tableViewOutlet.deleteRows(at: [indexPath], with: .fade)
+            
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(AppData.setofcardsets) {
+                AppData.defaults.set(encoded, forKey: "CardSetSet")
+            }
+            tableViewOutlet.reloadData()
+         //   defaults.setValue(shoppingCart, forKey: "shoppingCart")
+            
+            
+        }
+        }
+
+    
+    
 
     
     @IBAction func goToAction(_ sender: Any) {
