@@ -24,6 +24,12 @@ class FiveViewController: UIViewController {
         = questionOutlet.text ?? ""
         let answer = answerOutlet.text ?? ""
         
+        let newCard = card(question2: question, answer2: answer)
+        AppData.setofcardsets[AppData.index].addCard(myCard: newCard)
+        
+        
+        questionOutlet.text = ""
+        answerOutlet.text = ""
         
         
         

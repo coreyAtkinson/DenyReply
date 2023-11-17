@@ -21,6 +21,10 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
        // print(AppData.setofcardsets)
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableViewOutlet.reloadData()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppData.setofcardsets[AppData.index].cards.count
     }
@@ -33,13 +37,13 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
+
     
-    @IBAction func gotoAddCardAction(_ sender: Any) {
+    @IBAction func goToAction(_ sender: Any) {
         
         performSegue(withIdentifier: "toFive", sender: self)
+
     }
-    
-    
     
   
 }
