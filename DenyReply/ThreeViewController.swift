@@ -72,6 +72,16 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     }
     
+    
+    
+    @IBAction func goToQuizAction(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toQuiz", sender: self)
+    }
+    
+    
+    
+    
   
     
 }
