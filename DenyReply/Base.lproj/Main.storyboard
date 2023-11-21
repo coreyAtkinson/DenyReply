@@ -223,22 +223,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOj-4B-Lc2">
-                                <rect key="frame" x="17" y="270" width="75" height="35"/>
+                                <rect key="frame" x="25" y="267" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2M-XO-3KM">
-                                <rect key="frame" x="150" y="270" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="a1Action:" destination="7SN-p3-zIX" eventType="touchUpInside" id="d4I-S9-GhX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJE-V6-sSb">
                                 <rect key="frame" x="284" y="270" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="a3Action:" destination="7SN-p3-zIX" eventType="touchUpInside" id="5ZV-KB-abQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjC-Bl-Xag">
                                 <rect key="frame" x="167" y="323" width="42" height="21"/>
@@ -259,12 +259,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="-&gt;"/>
+                                <connections>
+                                    <action selector="nextAction:" destination="7SN-p3-zIX" eventType="touchUpInside" id="JQZ-rf-nuV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2M-XO-3KM">
+                                <rect key="frame" x="151" y="270" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="a2Action:" destination="7SN-p3-zIX" eventType="touchUpInside" id="v4E-DM-JOg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ah8-0v-8y5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="xEI-ON-C21"/>
+                    <connections>
+                        <outlet property="a1Outlet" destination="WOj-4B-Lc2" id="akT-KR-Wo5"/>
+                        <outlet property="a2Outlet" destination="D2M-XO-3KM" id="4BD-Pm-y6U"/>
+                        <outlet property="a3Outlet" destination="dJE-V6-sSb" id="5Tv-wi-Y6q"/>
+                        <outlet property="correctOutlet" destination="CjC-Bl-Xag" id="7sF-RE-azI"/>
+                        <outlet property="questionOutlet" destination="NnN-Ba-FPt" id="7pL-bc-0Wd"/>
+                        <outlet property="scoreOutlet" destination="AsF-Gu-dMD" id="Lu4-ug-u9D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VZ-CF-otv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,6 +334,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Go to quiz -&gt;"/>
+                                <connections>
+                                    <action selector="quizAction:" destination="0ZQ-hN-mtJ" eventType="touchUpInside" id="1hm-lD-GiI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QMx-OX-pjv"/>
