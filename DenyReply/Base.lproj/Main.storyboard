@@ -233,18 +233,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="a1Action:" destination="7SN-p3-zIX" eventType="touchUpInside" id="fuC-AM-Him"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2M-XO-3KM">
                                 <rect key="frame" x="150" y="270" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="a2Action:" destination="7SN-p3-zIX" eventType="touchUpInside" id="hYu-Zk-axB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJE-V6-sSb">
                                 <rect key="frame" x="284" y="270" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="a3Action:" destination="7SN-p3-zIX" eventType="touchUpInside" id="xoN-Fb-URw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjC-Bl-Xag">
                                 <rect key="frame" x="167" y="323" width="37" height="19"/>
@@ -276,12 +285,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="-&gt;"/>
+                                <connections>
+                                    <action selector="nextAction:" destination="7SN-p3-zIX" eventType="touchUpInside" id="mH5-dW-1Oc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ah8-0v-8y5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="xEI-ON-C21"/>
+                    <connections>
+                        <outlet property="a1Outlet" destination="WOj-4B-Lc2" id="IDf-Bk-s85"/>
+                        <outlet property="a2Outlet" destination="D2M-XO-3KM" id="clB-2Q-Vvu"/>
+                        <outlet property="a3Outlet" destination="dJE-V6-sSb" id="le9-2c-XZL"/>
+                        <outlet property="correctOutlet" destination="CjC-Bl-Xag" id="Mdh-6H-rOi"/>
+                        <outlet property="questionOutlet" destination="NnN-Ba-FPt" id="JRD-XO-Wto"/>
+                        <outlet property="scoreOutlet" destination="AsF-Gu-dMD" id="zPg-Z9-Imc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VZ-CF-otv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

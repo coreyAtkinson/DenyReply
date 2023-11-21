@@ -91,7 +91,6 @@
 		B95022822B03CC5400FE8E6B = {
 			isa = PBXGroup;
 			children = (
-				423286022B0CFFA400FF60A2 /* viewQuiz.swift */,
 				B950228D2B03CC5400FE8E6B /* DenyReply */,
 				B95022A72B03CC5600FE8E6B /* DenyReplyTests */,
 				B95022B12B03CC5600FE8E6B /* DenyReplyUITests */,
@@ -112,6 +111,7 @@
 		B950228D2B03CC5400FE8E6B /* DenyReply */ = {
 			isa = PBXGroup;
 			children = (
+				423286022B0CFFA400FF60A2 /* viewQuiz.swift */,
 				B950228E2B03CC5400FE8E6B /* AppDelegate.swift */,
 				B95022902B03CC5400FE8E6B /* SceneDelegate.swift */,
 				B95022922B03CC5400FE8E6B /* ViewController.swift */,
