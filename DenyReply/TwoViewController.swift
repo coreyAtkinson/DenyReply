@@ -50,7 +50,7 @@ var direction = 0
         performSegue(withIdentifier: "toThree", sender: nil)
         direction = 0
         
-        print("Cell \(indexPath.row) clicked")
+       // print("Cell \(indexPath.row) clicked")
       }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

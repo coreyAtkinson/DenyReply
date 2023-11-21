@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423286032B0CFFA400FF60A2 /* viewQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423286022B0CFFA400FF60A2 /* viewQuiz.swift */; };
 		B950228F2B03CC5400FE8E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950228E2B03CC5400FE8E6B /* AppDelegate.swift */; };
 		B95022912B03CC5400FE8E6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95022902B03CC5400FE8E6B /* SceneDelegate.swift */; };
 		B95022932B03CC5400FE8E6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95022922B03CC5400FE8E6B /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		423286022B0CFFA400FF60A2 /* viewQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewQuiz.swift; sourceTree = "<group>"; };
 		B950228B2B03CC5400FE8E6B /* DenyReply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DenyReply.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950228E2B03CC5400FE8E6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B95022902B03CC5400FE8E6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		B95022822B03CC5400FE8E6B = {
 			isa = PBXGroup;
 			children = (
+				423286022B0CFFA400FF60A2 /* viewQuiz.swift */,
 				B950228D2B03CC5400FE8E6B /* DenyReply */,
 				B95022A72B03CC5600FE8E6B /* DenyReplyTests */,
 				B95022B12B03CC5600FE8E6B /* DenyReplyUITests */,
@@ -275,6 +278,7 @@
 			files = (
 				B9D59B6B2B0516A2000A25CB /* TwoViewController.swift in Sources */,
 				B95022932B03CC5400FE8E6B /* ViewController.swift in Sources */,
+				423286032B0CFFA400FF60A2 /* viewQuiz.swift in Sources */,
 				B9D59B6F2B051C67000A25CB /* FourViewController.swift in Sources */,
 				B950228F2B03CC5400FE8E6B /* AppDelegate.swift in Sources */,
 				B9D59B712B051ED3000A25CB /* FiveViewController.swift in Sources */,
