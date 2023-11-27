@@ -22,7 +22,7 @@ var score = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         questionOutlet.text = questions[i].question
-         randomAnswers = [questions[i].answer, questions[Int.random(in: 0...questions.count)].answer,questions[Int.random(in: 0...questions.count)].answer]
+         randomAnswers = [questions[i].answer, questions[Int.random(in: 0...questions.count - 1)].answer,questions[Int.random(in: 0...questions.count - 1)].answer]
       
         randomAnswers.shuffle()
         a1Outlet.titleLabel?.text = "\(randomAnswers[0])"
@@ -36,8 +36,20 @@ var score = 0
         {
             i = i + 1
             questionOutlet.text = questions[i].question
-            randomAnswers = [questions[i].answer, questions[Int.random(in: 0...questions.count)].answer,questions[Int.random(in: 0...questions.count)].answer]
+            randomAnswers = [questions[i].answer, questions[Int.random(in: 0...questions.count - 1)].answer,questions[Int.random(in: 0...questions.count - 1)].answer]
            randomAnswers.shuffle()
+            if(randomAnswers[0] == questions[i].answer)
+            {
+                rightAnswer = 1
+            }
+            if(randomAnswers[1] == questions[i].answer)
+            {
+                rightAnswer = 2
+            }
+            if(randomAnswers[3] == questions[i].answer)
+            {
+                rightAnswer = 3
+            }
            a1Outlet.titleLabel?.text = "\(randomAnswers[0])"
            a2Outlet.titleLabel?.text = "\(randomAnswers[1])"
            a3Outlet.titleLabel?.text = "\(randomAnswers[2])"
