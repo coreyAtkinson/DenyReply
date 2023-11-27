@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// hi
 class viewQuiz: UIViewController {
 var score = 0
     @IBOutlet weak var a2Outlet: UIButton!
