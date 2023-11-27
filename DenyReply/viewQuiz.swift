@@ -22,7 +22,8 @@ var score = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         questionOutlet.text = questions[i].question
-         randomAnswers = [questions[i].answer, questions[Int.random(in: 0...questions.count - 1)].answer,questions[Int.random(in: 0...questions.count - 1)].answer]
+        var rands = generateRando(from: 0, to: questions.count - 1, quant: 2)
+        randomAnswers = [questions[i].answer, questions[rands[0]].answer,questions[rands[1]].answer]
       
         randomAnswers.shuffle()
         a1Outlet.titleLabel?.text = "\(randomAnswers[0])"
@@ -31,13 +32,45 @@ var score = 0
         // Do any additional setup after loading the view.
     }
     
+    func generateRando(from: Int, to: Int, quant: Int?) -> [Int]
+    {
+        var myRandomNumbers = [Int]()
+        var numberOfNumbers = quant
+        
+        var lower = UInt32(from)
+        var higher = UInt32(to)
+        
+        if numberOfNumbers == nil || numberOfNumbers!  > (to-from) + 1
+        {
+            numberOfNumbers = (to-from) + 1
+        }
+        while(myRandomNumbers.count != numberOfNumbers)
+        {
+            let myNumber = arc4random_uniform(higher - lower) + lower
+            
+            if !myRandomNumbers.contains(Int(myNumber))
+            {
+                myRandomNumbers.append(Int(myNumber))
+            }
+        }
+        return myRandomNumbers
+    }
+    
+    
+    
+    
     @IBAction func nextAction(_ sender: UIButton) {
         if(i < questions.count - 1)
         {
             i = i + 1
             questionOutlet.text = questions[i].question
-            randomAnswers = [questions[i].answer, questions[Int.random(in: 0...questions.count - 1)].answer,questions[Int.random(in: 0...questions.count - 1)].answer]
+            var rands = generateRando(from: 0, to: questions.count - 1, quant: 2)
+            randomAnswers = [questions[i].answer, questions[rands[0]].answer,questions[rands[1]].answer]
            randomAnswers.shuffle()
+            
+            print(randomAnswers[0])
+            print(randomAnswers[1])
+            print(randomAnswers[2])
             if(randomAnswers[0] == questions[i].answer)
             {
                 rightAnswer = 1
@@ -65,6 +98,7 @@ var score = 0
         {
             correctOutlet.text = "correct!"
             score = score + 1
+            scoreOutlet.text = "score: \(score)"
         }
         else
         {
@@ -78,6 +112,7 @@ var score = 0
         {
             correctOutlet.text = "correct!"
             score = score + 1
+            scoreOutlet.text = "score: \(score)"
         }
         else
         {
@@ -90,6 +125,7 @@ var score = 0
         {
             correctOutlet.text = "correct!"
             score = score + 1
+            scoreOutlet.text = "score: \(score)"
         }
         else
         {
