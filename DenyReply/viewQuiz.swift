@@ -46,7 +46,7 @@ var score = 0
             {
                 rightAnswer = 2
             }
-            if(randomAnswers[3] == questions[i].answer)
+            if(randomAnswers[2] == questions[i].answer)
             {
                 rightAnswer = 3
             }
