@@ -10,16 +10,13 @@ import UIKit
 class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewOutlet: UITableView!
-   // var set : cardSetClass!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
-        
-       // print(AppData.setofcardsets)
-        // Do any additional setup after loading the view.
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +46,6 @@ class ThreeViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 AppData.defaults.set(encoded, forKey: "CardSetSet")
             }
             tableViewOutlet.reloadData()
-         //   defaults.setValue(shoppingCart, forKey: "shoppingCart")
             
             
         }

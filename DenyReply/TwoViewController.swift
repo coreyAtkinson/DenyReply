@@ -12,11 +12,12 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     var index = 0
 var direction = 0
+    
+    @IBOutlet weak var setLabelOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOutlet.dataSource = self
         collectionViewOutlet.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     
@@ -31,9 +32,6 @@ var direction = 0
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "yay", for: indexPath)
         cell.backgroundColor = UIColor(named: AppData.setofcardsets[indexPath.row].setColor)
-        
-        //cell.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
-        
     
         return cell
     }
@@ -46,18 +44,21 @@ var direction = 0
     func collectionView(_ collectionView: UICollectionView,
       didSelectItemAt indexPath: IndexPath) {
         AppData.index = indexPath.row
-        direction = 1
-        performSegue(withIdentifier: "toThree", sender: nil)
-        direction = 0
         
-       // print("Cell \(indexPath.row) clicked")
+        setLabelOutlet.text = "Set: \(AppData.setofcardsets[AppData.index].setName)"
+        direction = 1
+        direction = 0
       }
+    
+    
+    @IBAction func goToSetAction(_ sender: Any) {
+        performSegue(withIdentifier: "toThree", sender: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if direction == 1
         {
             let nvc = segue.destination as! ThreeViewController
-                //    nvc.set = AppData.setofcardsets[index]
         }
     }
 

@@ -7,14 +7,14 @@
 
 import UIKit
 
-class FiveViewController: UIViewController {
+class FiveViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var questionOutlet: UITextField!
     
     @IBOutlet weak var answerOutlet: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        questionOutlet.delegate = self
+        answerOutlet.delegate = self
     }
     
 
@@ -35,10 +35,26 @@ class FiveViewController: UIViewController {
         if let encoded = try? encoder.encode(AppData.setofcardsets) {
             AppData.defaults.set(encoded, forKey: "CardSetSet")
         }
+    }
+    
+    
+    
+    @IBAction func deleteSetAction(_ sender: Any) {
         
-        
+        AppData.setofcardsets.remove(at: AppData.index)
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.setofcardsets) {
+            AppData.defaults.set(encoded, forKey: "CardSetSet")
+        }
+        performSegue(withIdentifier: "toMainScreen", sender: self)
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        questionOutlet.resignFirstResponder()
+        answerOutlet.resignFirstResponder()
+        
+        return true
+    }
 
 }
