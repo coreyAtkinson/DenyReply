@@ -299,6 +299,9 @@
                         <outlet property="a1Outlet" destination="WOj-4B-Lc2" id="IDf-Bk-s85"/>
                         <outlet property="a2Outlet" destination="D2M-XO-3KM" id="clB-2Q-Vvu"/>
                         <outlet property="a3Outlet" destination="dJE-V6-sSb" id="le9-2c-XZL"/>
+                        <outlet property="button1Outlet" destination="WOj-4B-Lc2" id="g0R-jy-aMM"/>
+                        <outlet property="button2Outlet" destination="D2M-XO-3KM" id="dFj-yb-t9J"/>
+                        <outlet property="button3Outlet" destination="dJE-V6-sSb" id="Ifu-xg-xl1"/>
                         <outlet property="correctOutlet" destination="CjC-Bl-Xag" id="Mdh-6H-rOi"/>
                         <outlet property="questionOutlet" destination="NnN-Ba-FPt" id="JRD-XO-Wto"/>
                         <outlet property="scoreOutlet" destination="AsF-Gu-dMD" id="zPg-Z9-Imc"/>
