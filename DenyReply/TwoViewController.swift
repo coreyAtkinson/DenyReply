@@ -12,6 +12,11 @@ class TwoViewController: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     var index = 0
 var direction = 0
+    
+    @IBOutlet weak var setLabelOutlet: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOutlet.dataSource = self
@@ -46,12 +51,21 @@ var direction = 0
     func collectionView(_ collectionView: UICollectionView,
       didSelectItemAt indexPath: IndexPath) {
         AppData.index = indexPath.row
+        
+        setLabelOutlet.text = "Set: \(AppData.setofcardsets[AppData.index].setName)"
         direction = 1
-        performSegue(withIdentifier: "toThree", sender: nil)
+   //    performSegue(withIdentifier: "toThree", sender: nil)
         direction = 0
+        
+        
         
        // print("Cell \(indexPath.row) clicked")
       }
+    
+    
+    @IBAction func goToSetAction(_ sender: Any) {
+        performSegue(withIdentifier: "toThree", sender: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if direction == 1
