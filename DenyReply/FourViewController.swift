@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FourViewController: UIViewController {
+class FourViewController: UIViewController, UITextFieldDelegate {
 
     
     let potColors = ["pink", "red", "orange", "yellow", "green", "blue", "purple", "brown"]
@@ -15,8 +15,8 @@ class FourViewController: UIViewController {
     @IBOutlet weak var setNameOutlet: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setNameOutlet.delegate = self
+        setColorOutlet.delegate = self
     }
     
     @IBAction func setAction(_ sender: UIButton) {
@@ -37,20 +37,12 @@ class FourViewController: UIViewController {
         
         setNameOutlet.text = ""
         setColorOutlet.text = ""
-        
-        
-        
-        
     }
     
     
     
     
-    func addnewSet(name: String, color: String){
-        
-       // let thisname = name!
-       // let thiscolor = color!
-        
+    func addnewSet(name: String, color: String){ 
         let exampleCard = card(question2: "This is an example card", answer2: "this is an example answer")
         
         let newset = cardSetClass(setName: name, setColor: color, cards: [exampleCard])
@@ -63,6 +55,11 @@ class FourViewController: UIViewController {
         }
     }
     
-   
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        setNameOutlet.resignFirstResponder()
+        setColorOutlet.resignFirstResponder()
+        
+        return true
+    }
 
 }

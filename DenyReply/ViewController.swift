@@ -13,11 +13,10 @@ class card: Codable
     var answer : String
     
     
-    //<<<<<<< Updated upstream
     init(question2: String, answer2: String) {
         question = question2
         answer = answer2
-        //=======
+       
         
     }
     
@@ -34,7 +33,6 @@ class card: Codable
             self.setColor = setColor
             self.cards = cards
             
-            //>>>>>>> Stashed changes
         }
         
         
@@ -50,7 +48,6 @@ class card: Codable
         func shuffleCards(){
             cards.shuffle()
         }
-        //  }
         
         
     }
@@ -87,7 +84,7 @@ class card: Codable
             let set1 = cardSetClass(setName: "numbers", setColor: "pink", cards: [card1])
             
             AppData.setofcardsets.append(set1)
-            // Do any additional setup after loading the view.
+    
             
             
             if let items = AppData.defaults.data(forKey: "CardSetSet") {
@@ -97,8 +94,6 @@ class card: Codable
                             }
                 
                     }
-            
-            
         }
         
         
@@ -114,29 +109,17 @@ class card: Codable
         
         func addnewSet(name: String, color: String){
             
-           // let thisname = name!
-           // let thiscolor = color!
-            
             let exampleCard = card(question2: "This is an example card", answer2: "this is an example answer")
             
             let newset = cardSetClass(setName: name, setColor: color, cards: [exampleCard])
             
             AppData.setofcardsets.append(newset)
             
-            //encoding
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(AppData.setofcardsets) {
                 AppData.defaults.set(encoded, forKey: "CardSetSet")
             }
         }
-        
-        
-        
-        
-        
-        
-        //Yassss
-        //wwwwwwwwww
-        
+    
     }
     
